@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <ul class="menu">
+        <li>
+            <a asp-controller="Home" asp-action="Index">Главная</a>
+        </li>
+
+        <li>
+        <a href="~/ShopCart/Index">Корзина</a>
+        </li>
+        <li>
+            <a href=#>Смартфоны</a>
+            <ul class="submenu">
+                <li><a href="~/Phones/List">Все смартфоны</a></li>
+                <li><a href="~/Phones/List/Apple">Apple</a></li>
+                <li><a href="~/Phones/List/Samsung">Samsung</a></li>
+                <li><a href="~/Phones/List/Realme">Realme</a></li>
+                <li><a href="~/Phones/List/Redmi">Redmi</a></li>
+                <li><a href="~/Phones/List/Honor">Honor</a></li>
+                <li><a href="~/Phones/List/Poco">Poco</a></li>
+            </ul>
+        </li>
+    </ul>
+        @RenderBody()
+</body>
+</html>

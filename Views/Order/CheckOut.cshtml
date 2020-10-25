@@ -1,0 +1,38 @@
+﻿@model Order
+    <head>
+        <link href="~/css/styleOrder.css" rel="stylesheet" type="text/css" />
+    </head>
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+                <form asp-action="CheckOut" method="post">
+
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>Оформление заказа</h3>
+                            <label asp-for="Name"><i class="fa fa-user"></i> Имя</label>
+                            <input asp-for="Name" required type="text" id="Name" name="Name">
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                            <label asp-for="Surname"><i class="fa fa-user"></i> Фамилия</label>
+                            <input asp-for="Surname"required  type="text" id="Surname" name="Surname">
+                            <span asp-validation-for="Surname" class="text-danger"></span>
+                            <label asp-for="Email"><i class="fa fa-envelope"></i> Email</label>
+                            <input asp-for="Email" required type="text" id="Email" name="Email">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                            <label asp-for="Adress"><i class="fa fa-address-card-o"></i> Адрес</label>
+                            <input asp-for="Adress" required type="text" id="Adress" name="Adress">
+                            <span asp-validation-for="Adress" class="text-danger"></span>
+                            <label asp-for="phoneNumber"><i class="fa fa-phone-card-o"></i> Телефон</label>
+                            <input asp-for="phoneNumber" required type="text" id="phoneNumber" name="phoneNumber">
+                            <span asp-validation-for="phoneNumber" class="text-danger"></span>
+
+                        </div>
+
+
+                    </div>
+                    <input type="submit" value="Завершить" class="btn">
+                </form>
+            </div>
+        </div>
+
+    </div>

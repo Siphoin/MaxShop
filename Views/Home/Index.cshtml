@@ -1,0 +1,16 @@
+﻿@model HomeViewModel
+<h1>Топ смартфонов</h1>
+
+
+<head>
+    <link href="~/css/styleList.css" rel="stylesheet" type="text/css" />
+</head>
+<div class="label">
+    <h2>Все смартфоны</h2>
+</div>
+@{
+    foreach (Phone phone in Model.FavoritePhones)
+    {
+        @Html.Partial("allPhones", phone)
+    }
+}

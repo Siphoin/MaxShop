@@ -1,0 +1,16 @@
+﻿@model ShopCartViewModel
+<head>
+    <link href="~/css/styleShopCart.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        @foreach (var el in Model.shopCart.listShopPhoneItems)
+        {
+            <div class="alert">
+                <b>Телефон:</b> @el.phone.Name<br />
+                <b>Цена:</b> @el.phone.Price.ToString("c")<br />
+            </div>
+        }
+    </div>
+    <a class="button7"asp-controller="Order" asp-action="CheckOut">Оплатить</a>
+</body>

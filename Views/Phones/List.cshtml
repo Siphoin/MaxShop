@@ -1,0 +1,16 @@
+﻿
+<head>
+    <link href="~/css/styleList.css" rel="stylesheet" type="text/css" />
+</head>
+<div class="label">
+    <h2>Все смартфоны</h2>
+</div>
+<div class="label2">
+    <h3>@Model.currCategory</h3>
+</div>
+@{
+    foreach (Phone phone in Model.AllPhones)
+    {
+          @Html.Partial("allPhones", phone)
+    }
+}
